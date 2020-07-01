@@ -1,26 +1,17 @@
+import 'package:uas/ui/berandaadmin.dart';
+import 'package:uas/ui/berandauser.dart';
+import 'package:uas/ui/home.dart';
+import 'package:uas/ui/login.dart';
 import 'package:flutter/material.dart';
-import './login.dart';
-import './home_user.dart';
-import './home_admin.dart';
-import './akun.dart';
-
-void main() => runApp(new MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        title: 'Login',
-        home: new Login(),
-        routes: <String, WidgetBuilder>{
-          '/home_admin': (BuildContext context) => new HomeAdmin(),
-          '/home_user': (BuildContext context) => new HomeUser(),
-          '/login': (BuildContext context) => new Login(),
-          '/akun': (BuildContext context) => new Akun(),
-        });
-  }
-}
+void main() => runApp(
+new MaterialApp(
+title: 'Penjualan Kucing',
+home: Berandauser(),
+routes: <String, WidgetBuilder>{
+'/Berandauser': (BuildContext context) => new Berandauser(),
+'/Berandaadmin': (BuildContext context) => new Berandaadmin(),
+'/login':(BuildContext context)=>Login(),
+'/Penjualan': (BuildContext context) => new Home(),
+},
+)
+);
